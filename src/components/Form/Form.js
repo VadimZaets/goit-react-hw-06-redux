@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { useDispatch } from "react-redux";
 
-import actions from "../../redux/actions";
+import operations from "../../redux/operations";
 
 export default function Form() {
   const [name, setName] = useState("");
@@ -26,7 +26,7 @@ export default function Form() {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    dispatch(actions.addContact({ name, number }));
+    dispatch(operations.addContact({ name, number }));
     setName("");
     setNumber("");
   };

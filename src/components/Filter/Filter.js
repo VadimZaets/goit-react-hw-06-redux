@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import actions from "../../redux/actions";
+import { changeFilter } from "../../redux/actions";
 import { getFilter } from "../../redux/selector";
 
 function Filter() {
@@ -11,7 +11,7 @@ function Filter() {
       <input
         type="text"
         value={value}
-        onChange={(e) => dispatch(actions.changeFilter(e.target.value))}
+        onChange={(e) => dispatch(changeFilter(e.target.value))}
       />
     </div>
   );

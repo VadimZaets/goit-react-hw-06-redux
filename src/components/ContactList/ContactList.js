@@ -1,13 +1,13 @@
 import PropTypes from "prop-types";
 import { useDispatch, useSelector } from "react-redux";
-import actions from "../../redux/actions";
+import operations from "../../redux/operations";
 import { getVisibleContacts } from "../../redux/selector";
 
 const ContactList = () => {
   const contacts = useSelector(getVisibleContacts);
   const dispatch = useDispatch();
   const onRemoveContact = (contactId) =>
-    dispatch(actions.removeContact(contactId));
+    dispatch(operations.removeContact(contactId));
 
   return (
     <ul>
